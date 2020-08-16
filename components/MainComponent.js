@@ -5,7 +5,7 @@ import Dishdetail from './DishDetailComponent';
 import {View, Platform} from 'react-native';
 import { createStackNavigator, createDrawerNavigator } from 'react-navigation'; 
 import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
-
+import { Icon } from 'react-native-elements';
 
 const MenuNavigator = createStackNavigator({
     Menu: { screen: Menu },
@@ -25,7 +25,7 @@ const MenuNavigator = createStackNavigator({
 });
 
 const HomeNavigator = createStackNavigator({
-    Menu: { screen: Home }
+    Home: { screen: Home }
 
 },{
     navigationOptions: {
@@ -35,7 +35,8 @@ const HomeNavigator = createStackNavigator({
         headerTintColor:'#fff',
         headerTitleStyle:{
             color:'#fff'
-        }
+        },
+        
     }
 });
 
@@ -43,14 +44,14 @@ const MainNavigator = createDrawerNavigator({
     Home: {
         screen: HomeNavigator,
         navigationOptions:{
-            title: 'Home ',
+            title: 'Home',
             drawerLabel: 'Home'
         }
     },
     Menu: {
         screen: MenuNavigator,
         navigationOptions:{
-            title: 'Menu ',
+            title: 'Menu',
             drawerLabel: 'Menu'
         }
     }
