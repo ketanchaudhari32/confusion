@@ -26,7 +26,7 @@ function RenderDish(props){
 }
 
 
-class Dishdetail extends component{
+class Dishdetail extends Component{
     
 constructor(props){
     super(props);

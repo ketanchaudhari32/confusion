@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Flatlist } from 'react-native';
+import { View, FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { DISHES } from '../shared/dishes';
 
@@ -37,10 +37,10 @@ class Menu extends Component{
 
 
     return(
-        <Flatlist 
+        <FlatList 
         data={this.state.dishes}
         renderItem={renderMenuItem}
-        ketExtractor={item => item.id.toString()}
+        keyExtractor={item => item.id.toString()}
         />
         );
     }
