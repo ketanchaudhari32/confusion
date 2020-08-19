@@ -20,5 +20,5 @@ export const ConfigureStore = () =>{
 
     );
 
-    return store
+    return store;
 }
