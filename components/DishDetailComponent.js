@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, ScrollView, FlatList } from 'react-native';
 import { Card, Icon} from 'react-native-elements';
 import {connect} from 'react-redux';
+import {baseUrl} from '../shared/baseUrl';
 
 const mapStateToProps = state => {
     return{

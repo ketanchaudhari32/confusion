@@ -56,7 +56,7 @@ class Home extends Component{
                 item={this.props.promotions.promotions.filter((promo)=> promo.featured)[0]}
                  />
                  <RenderItem
-                item={this.props.leaders.dishes.filter((leader)=> leader.featured)[0]}
+                item={this.props.leaders.leaders.filter((leader)=> leader.featured)[0]}
                  />
             </ScrollView>
         );

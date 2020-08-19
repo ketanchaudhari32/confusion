@@ -237,10 +237,10 @@ const styles =StyleSheet.create({
         fontSize:24,
         fontWeight:'bold'
     },
-    drawerimage:{
+    drawerImage:{
         margin:10,
-        width:18,
-        height:16
+        width:80,
+        height:60
     }
 
 });
