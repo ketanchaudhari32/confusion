@@ -8,6 +8,21 @@ import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 import ContactDetail from './ContactComponent';
 import AboutDetail from './AboutComponent';
 import {Icon} from 'react-native-elements';
+import {connect} from 'react-redux';
+import { fetchDishes, fetchComments, fetchPromos, fetchLeaders} from '../redux/ActionCreator';
+
+
+const mapStateToProps = state => {
+    return{
+    }
+}
+
+const mapDispatchToProps = dispatch => ({
+    fetchDishes: () => dispatch(fetchDishes()),
+    fetchComments: () => dispatch(fetchComments()),
+    fetchLeaders: () => dispatch(fetchLeaders()),
+    fetchPromos: () => dispatch(fetchPromos()),
+})
 
 
 const MenuNavigator = createStackNavigator({
@@ -188,6 +203,13 @@ const MainNavigator = createDrawerNavigator({
 );
 
 class Main extends Component{
+
+    componentDidMount(){
+        this.props.fetchDishes();
+        this.props.fetchComments();
+        this.props.fetchPromos();
+        this.props.fetchLeaders();
+    }
     
     render() {
         return(
@@ -224,4 +246,4 @@ const styles =StyleSheet.create({
 });
 
 
-export default Main;
+export default connect(mapStateToProps,mapDispatchToProps)(Main);
