@@ -13,8 +13,8 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps= dispatch =({
-    postFavorite: (dishId) => dispatch(postFavorite(diskId)),
+const mapDispatchToProps = dispatch => ({
+    postFavorite: (dishId) => dispatch(postFavorite(dishId)),
 })
 
 

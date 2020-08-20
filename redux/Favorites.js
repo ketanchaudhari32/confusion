@@ -7,7 +7,7 @@ export const favorites = (state=[],action=[]) => {
                 return state;
             }
             else{
-                return state.concate(action.apyload);
+                return state.concat(action.apyload);
             }
         default:
             return state;
