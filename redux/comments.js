@@ -1,5 +1,6 @@
 import * as ActionTypes from './ActionTypes';
 
+
 export const comments =(state={
     errMess:null,
     comments:[],
@@ -11,6 +12,9 @@ export const comments =(state={
 
         case ActionTypes.COMMENTS_FAILED:
             return {...state, errMess:action.payload,comments:[]};
+
+        case ActionTypes.ADD_COMMENT:
+            return {comments: action.payload};
 
         default:
             return state;
