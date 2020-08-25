@@ -52,11 +52,9 @@ const MenuNavigator = createStackNavigator({
 });
 
 const ContactNavigator = createStackNavigator({
-    //Home: { screen: Home },
     ContactDetail: { screen: ContactDetail },
 
 },{
-    //initialRouteName:'Home',
     navigationOptions:  ({navigation}) => ({
         headerStyle:{
             backgroundColor: '#512DA8'

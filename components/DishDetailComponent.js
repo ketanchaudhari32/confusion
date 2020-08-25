@@ -73,7 +73,7 @@ function RenderDish(props){
     if (dish!=null){
         return(
             <View>
-            <Animatable.View animation='fadieInDown' duration={2000} delay={1000}
+            <Animatable.View animation='fadeInDown' duration={2000} delay={1000} useNativeDriver={true}
                 ref={this.handleViewRef}
                {...panResponder.panHandlers}
             >
@@ -143,7 +143,7 @@ function RenderComments(props){
     }
 
     return(
-        <Animatable.View animation='fadieInUp' duration={2000} delay={1000}>
+        <Animatable.View animation='fadeInUp' duration={2000} delay={1000} useNativeDriver={true}>
             <Card title='Comments'>
                 <FlatList 
                     data={comments}

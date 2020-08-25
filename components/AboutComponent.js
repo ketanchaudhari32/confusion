@@ -86,7 +86,7 @@ class AboutDetail extends Component {
         if (this.props.leaders.isLoading){
             return(
                 <ScrollView>
-                    <Animatable.View animation='fadieInDown' duration={2000} delay={1000}>
+                    <Animatable.View animation='fadeInDown' duration={2000} delay={1000} useNativeDriver={true}>
                     <History />
                     <Card title='Corporate Leadership'>
                         <Loading />
@@ -98,7 +98,7 @@ class AboutDetail extends Component {
         else if (this.props.leaders.errMess){
             return(
                 <ScrollView>
-                    <Animatable.View animation='fadieInDown' duration={2000} delay={1000}>
+                    <Animatable.View animation='fadeInDown' duration={2000} delay={1000}>
                         <History />
                         <Card title='Corporate Leadership'>
                             <Text>

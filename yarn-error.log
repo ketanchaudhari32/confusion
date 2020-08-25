@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Ketan\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-animatable@1.2.4
+  C:\Program Files\nodejs\node.exe C:\Users\Ketan\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @react-native-community/async-storage
 
 PATH: 
   C:\Program Files\Dell\DW WLAN Card;;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Boxstarter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\ProgramData\chocolatey\bin;C:\Users\Ketan\AppData\Local\Android\Sdk\platform-tools\abd.exe;C:\Users\Ketan\AppData\Local\Android\Sdk;C:\Program Files\dotnet\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\OpenSSH\;C:\GnuWin32\bin;C:\Program Files\Java\jdk-12.0.1\bin;C:\Program Files\Java\jre1.8.0_212\bin;C:\Program Files\OpenSSH-Win64;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\nodejs\;C:\Users\Ketan\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Ketan\AppData\Local\Programs\Python\Python38-32\;C:\Users\Ketan\AppData\Local\Programs\Python\Python35-32\Scripts\;C:\Users\Ketan\AppData\Local\Programs\Python\Python35-32\;C:\Users\Ketan\AppData\Local\Microsoft\WindowsApps;C:\src\flutter\bin;C:\Windows\System32;C:\Users\Ketan\AppData\Roaming\Pub\Cache\bin;C:\Users\Ketan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ketan\go\bin;C:\xampp\php;C:\Users\Ketan\AppData\Local\GitHubDesktop\bin;C:\Program Files\Java\jdk-12.0.1\bin;C:\Program Files\Java\jre1.8.0_212\bin;C:\Users\Ketan\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-12.0.1;C:\BigData\hadoop;C:\BigData\hadoop\bin;C:\BigData\hadoop\sbin;C:\Users\Ketan\Anaconda3\Scripts;C:\Users\Ketan\Anaconda3;C:\Users\Ketan\Anaconda3\Library\mingw-w64\bin;C:\Users\Ketan\Anaconda3\Library\usr\bin;C:\Users\Ketan\Anaconda3\Library\bin;C:\Users\Ketan\Anaconda3\bin;C:\Users\Ketan\Anaconda3\condabin;C:\Users\Ketan\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\Ketan\AppData\Roaming\npm
@@ -32,12 +32,15 @@ npm manifest:
       "react": "~16.13.1",
       "react-dom": "~16.13.1",
       "react-native": "^0.63.2",
+      "react-native-animatable": "1.2.4",
       "react-native-datepicker": "1.7.2",
       "react-native-elements": "^2.2.1",
+      "react-native-swipeout": "2.3.3",
       "react-navigation": "2.0.1",
       "react-redux": "5.0.7",
       "redux": "4.0.0",
       "redux-logger": "3.0.6",
+      "redux-persist": "^6.0.0",
       "redux-thunk": "2.2.0"
     },
     "devDependencies": {
@@ -2116,6 +2119,15 @@ Lockfile:
       js-yaml "^3.13.1"
       parse-json "^4.0.0"
   
+  create-react-class@^15.6.0:
+    version "15.6.3"
+    resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
+    integrity sha512-M+/3Q6E6DLO6Yx3OwrWjwHBnvfXXYA7W+dFjt/ZDBemHO1DDZhsalX/NUtnTYclN6GfnBDRh4qRHjcDHmlJBJg==
+    dependencies:
+      fbjs "^0.8.9"
+      loose-envify "^1.3.1"
+      object-assign "^4.1.1"
+  
   create-react-context@^0.2.1:
     version "0.2.3"
     resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
@@ -2673,7 +2685,7 @@ Lockfile:
       setimmediate "^1.0.5"
       ua-parser-js "^0.7.18"
   
-  fbjs@^0.8.0, fbjs@^0.8.4:
+  fbjs@^0.8.0, fbjs@^0.8.4, fbjs@^0.8.9:
     version "0.8.17"
     resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
     integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -3563,7 +3575,7 @@ Lockfile:
       dayjs "^1.8.15"
       yargs "^15.1.0"
   
-  loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
+  loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
     version "1.4.0"
     resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
     integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -4381,6 +4393,11 @@ Lockfile:
     dependencies:
       isarray "0.0.1"
   
+  performance-now@^2.1.0:
+    version "2.1.0"
+    resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
+    integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
+  
   pify@^4.0.1:
     version "4.0.1"
     resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
@@ -4521,6 +4538,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
     integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
   
+  raf@^3.1.0:
+    version "3.4.1"
+    resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
+    integrity sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==
+    dependencies:
+      performance-now "^2.1.0"
+  
   range-parser@~1.2.1:
     version "1.2.1"
     resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
@@ -4558,6 +4582,13 @@ Lockfile:
     version "3.0.4"
     resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
     integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+  
+  react-native-animatable@1.2.4:
+    version "1.2.4"
+    resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.2.4.tgz#b5fb7657e8f6edadbc26697057a327fb920b3039"
+    integrity sha512-cVTQXa/cp8gfxcl+l6I1rGAI7EeoNZ0ur9vtxb3tD5iGlJbIyUfQK61e6BycnZewdgQ639Mp6OrueXTpZlv76Q==
+    dependencies:
+      prop-types "^15.5.10"
   
   react-native-appearance@~0.3.3:
     version "0.3.4"
@@ -4633,6 +4664,15 @@ Lockfile:
     version "2.5.0"
     resolved "https://registry.yarnpkg.com/react-native-status-bar-height/-/react-native-status-bar-height-2.5.0.tgz#bc0fb85230603850aab9667ee8111a62954de90c"
     integrity sha512-sYBCPYA/NapBSHkdm/IVL4ID3LLlIuLqINi2FBDyMkc2BU9pfSGOtkz9yfxoK39mYJuTrlTOQ7mManARUsYDSA==
+  
+  react-native-swipeout@2.3.3:
+    version "2.3.3"
+    resolved "https://registry.yarnpkg.com/react-native-swipeout/-/react-native-swipeout-2.3.3.tgz#3b99db845ef75f0bfa467f1d8de0b7f7946326bd"
+    integrity sha512-q8cC30peGBH6m5rPG7PvJ4fQFxFMixzCdjeg/4DqwP66R8B2fxXtzWhV7XbOouS6O4VaXZdQDFKDwizma44fjg==
+    dependencies:
+      create-react-class "^15.6.0"
+      prop-types "^15.5.10"
+      react-tween-state "^0.1.5"
   
   react-native-tab-view@^0.0.74:
     version "0.0.74"
@@ -4732,6 +4772,14 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.4.3.tgz#966f1750c191672e76e16c2efa569150cc73ab53"
     integrity sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA==
   
+  react-tween-state@^0.1.5:
+    version "0.1.5"
+    resolved "https://registry.yarnpkg.com/react-tween-state/-/react-tween-state-0.1.5.tgz#e98b066551efb93cb92dd1be14995c2e3deae339"
+    integrity sha1-6YsGZVHvuTy5LdG+FJlcLj3q4zk=
+    dependencies:
+      raf "^3.1.0"
+      tween-functions "^1.0.1"
+  
   react@~16.13.1:
     version "16.13.1"
     resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
@@ -4760,6 +4808,11 @@ Lockfile:
     integrity sha1-91VZZvMJjzyIYExEnPC69XeCdL8=
     dependencies:
       deep-diff "^0.3.5"
+  
+  redux-persist@^6.0.0:
+    version "6.0.0"
+    resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-6.0.0.tgz#b4d2972f9859597c130d40d4b146fecdab51b3a8"
+    integrity sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==
   
   redux-thunk@2.2.0:
     version "2.2.0"
@@ -5442,6 +5495,11 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
     integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
+  
+  tween-functions@^1.0.1:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/tween-functions/-/tween-functions-1.2.0.tgz#1ae3a50e7c60bb3def774eac707acbca73bbc3ff"
+    integrity sha1-GuOlDnxguz3vd06scHrLynO7w/8=
   
   type-fest@^0.7.1:
     version "0.7.1"
