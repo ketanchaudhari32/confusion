@@ -39,6 +39,16 @@ function RenderDish(props){
 
     };
 
+    const recognizeComment=({moveX,moveY,dx,dy})=>{
+        if(dx > 200){
+            return true;
+        }
+        else{
+            return false;
+        }
+
+    };
+
     const panResponder = PanResponder.create({
         onStartShouldSetPanResponder: (e,gestureState)=>{
             return true;
@@ -64,8 +74,13 @@ function RenderDish(props){
                         }
                     ],
                     {cancelable: false}
-                )
+                );
+             if (recognizeComment(gestureState))
+                props.handlingComment();
+            
             return true;
+            
+            
         }
     });
 
@@ -255,7 +270,6 @@ render(){
                 />
                 <Button
                 onPress={()=> {
-                    //const commentid= this.props.comments.comments.filter((comment) => comment.id)[0] 
                     this.handleComment([+dishId][0],this.state.rating,this.state.author,this.state.comment);
                     this.toggleModal(); 
                     this.resetForm()
